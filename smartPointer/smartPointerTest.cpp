@@ -38,6 +38,7 @@ static void sharedPtrTest()
     pNico = nullptr;
     whoMadeCoffee.resize(2);
     cout << "use_count: " << whoMadeCoffee[0].use_count() << endl;
+    cout << "change" << endl;
 }
 static void uniquePtrTest()
 {
