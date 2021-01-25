@@ -38,7 +38,13 @@ static void sharedPtrTest()
     pNico = nullptr;
     whoMadeCoffee.resize(2);
     cout << "use_count: " << whoMadeCoffee[0].use_count() << endl;
-    cout << "change" << endl;
+
+    //对付array
+    shared_ptr<int> p{new int[10], 
+                        [](int *p)noexcept{
+                            delete[] p;
+                        }};
+    shared_ptr<int> p2{new int[10], default_delete<int[]>()};
 }
 static void uniquePtrTest()
 {
