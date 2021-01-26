@@ -1,3 +1,0 @@
-C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\cppCoding.dir/objects.a
-C:\MinGW\mingw64\bin\ar.exe cr CMakeFiles\cppCoding.dir/objects.a @CMakeFiles\cppCoding.dir\objects1.rsp
-C:\MinGW\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\cppCoding.dir/objects.a -Wl,--no-whole-archive -o cppCoding.exe -Wl,--out-implib,libcppCoding.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cppCoding.dir\linklibs.rsp
