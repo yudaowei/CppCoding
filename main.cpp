@@ -1,10 +1,11 @@
 #include <iostream>
 #include <bitset>
 #include <utility>
-#include "pair/pairtest.h"
-#include "tuple/tupletest.h"
-#include "exception/exceptiontest.h"
-#include "smartPointer/smartPointerTest.h"
+// #include "pair/pairtest.h"
+// #include "tuple/tupletest.h"
+// #include "exception/exceptiontest.h"
+// #include "smartPointer/smartPointerTest.h"
+#include "numericlimits/numberiClimitsTest.h"
 void printX()
 {
 
@@ -21,6 +22,7 @@ int main(int argc, char*argv[])
     // PairTest_nameSpace::pairTest();
     // ExceptNameSpace::exceptTest();
     // tupleTest_nameSpace::tupletest();
-    SmartPointerNamespace::smartPointerTest();
+    // SmartPointerNamespace::smartPointerTest();
+    NumberLimitNamepase::numberLimitTest();
     return 0;
 }
