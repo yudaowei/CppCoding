@@ -4,8 +4,9 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <fstream>
+#include <cstdio>
 namespace SmartPointerNamespace{
-
 void smartPointerTest();
 
 }
