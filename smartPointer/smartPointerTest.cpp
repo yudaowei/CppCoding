@@ -113,6 +113,14 @@ static void sharedPtrTest()
     //weak_ptr
     weakPtrTest();
 }
+
+class UniqueDelete{
+public:
+    void operator () (string* p){
+        cout << "call delete for UniqueDelete object" << endl;
+        delete p;
+    }
+};
 static void uniquePtrTest()
 {
     //unique_ptr独占式的指针
@@ -127,6 +135,20 @@ static void uniquePtrTest()
     cout << (pJutta==nullptr) << endl;
     cout << "pt " << *pt << endl;
 
+    //unique_ptr被当作对象成员可以避免资源泄露
+    //对付Array
+    //unique_ptr<string> up(new string[10]);//runtime ERROR
+    unique_ptr<string[]> up(new string[10]);//unique的偏特化版本, 不支持*, ->操作符
+    up[0] = "unique[]";
+    cout << up[0] << endl;
+
+    //unique指定删除器Delete 可写成lambda或者类
+    unique_ptr<string, UniqueDelete> uup(new string("yudaowei"));
+    unique_ptr<int, void(*)(int*)> uuup(new int[10], 
+                                        [](int* p)noexcept{
+                                            cout << "delete[] int[]" << endl;
+                                            delete[] p;
+                                        });
 }
 void smartPointerTest()
 {
