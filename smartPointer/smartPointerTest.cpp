@@ -115,6 +115,17 @@ static void sharedPtrTest()
 }
 static void uniquePtrTest()
 {
+    //unique_ptr独占式的指针
+    unique_ptr<string> pNico{new string("nico")};
+    unique_ptr<string> pJutta = make_unique<string>("jutta");
+
+    cout << "unique " << *pNico << endl;
+    string* str = pNico.release();
+    cout << "string " << *str << endl;
+
+    unique_ptr<string> pt = move(pNico);
+    cout << (pNico==nullptr) << endl;
+    cout << "pt " << (pt == nullptr) << endl;
 
 }
 void smartPointerTest()
