@@ -120,12 +120,12 @@ static void uniquePtrTest()
     unique_ptr<string> pJutta = make_unique<string>("jutta");
 
     cout << "unique " << *pNico << endl;
-    string* str = pNico.release();
+    string* str = pNico.release();//pNico失去资源所有权
     cout << "string " << *str << endl;
 
-    unique_ptr<string> pt = move(pNico);
-    cout << (pNico==nullptr) << endl;
-    cout << "pt " << (pt == nullptr) << endl;
+    unique_ptr<string> pt(std::move(pJutta));//转移所有权
+    cout << (pJutta==nullptr) << endl;
+    cout << "pt " << *pt << endl;
 
 }
 void smartPointerTest()
