@@ -5,7 +5,8 @@
 // #include "tuple/tupletest.h"
 // #include "exception/exceptiontest.h"
 // #include "smartPointer/smartPointerTest.h"
-#include "numericlimits/numberiClimitsTest.h"
+// #include "numericlimits/numberiClimitsTest.h"
+#include "typetrait/typetraittest.h"
 void printX()
 {
 
@@ -23,6 +24,7 @@ int main(int argc, char*argv[])
     // ExceptNameSpace::exceptTest();
     // tupleTest_nameSpace::tupletest();
     // SmartPointerNamespace::smartPointerTest();
-    NumberLimitNamepase::numberLimitTest();
+    // NumberLimitNamepase::numberLimitTest();
+    TypeTraitsNamespace::typeTraitsTest();
     return 0;
 }
