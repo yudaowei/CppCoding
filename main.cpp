@@ -6,7 +6,8 @@
 // #include "exception/exceptiontest.h"
 // #include "smartPointer/smartPointerTest.h"
 // #include "numericlimits/numberiClimitsTest.h"
-#include "typetrait/typetraittest.h"
+// #include "typetrait/typetraittest.h"
+#include "chrono/chronotest.h"
 void printX()
 {
 
@@ -25,6 +26,7 @@ int main(int argc, char*argv[])
     // tupleTest_nameSpace::tupletest();
     // SmartPointerNamespace::smartPointerTest();
     // NumberLimitNamepase::numberLimitTest();
-    TypeTraitsNamespace::typeTraitsTest();
+    // TypeTraitsNamespace::typeTraitsTest();
+    ChronoNamespace::chronoTest();
     return 0;
 }

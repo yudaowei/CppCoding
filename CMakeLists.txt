@@ -10,8 +10,11 @@ add_executable(cppCoding main.cpp
                     ${PROJECT_SOURCE_DIR}/exception/exceptiontest.cpp
                     ${PROJECT_SOURCE_DIR}/smartPointer/smartPointerTest.cpp
                     ${PROJECT_SOURCE_DIR}/numericlimits/numberiClimitsTest.cpp
-                    ${PROJECT_SOURCE_DIR}/typetrait/typetraittest.cpp)
+                    ${PROJECT_SOURCE_DIR}/typetrait/typetraittest.cpp
+                    ${PROJECT_SOURCE_DIR}/chrono/chronotest.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+
+set(CMAKE_CXX_STANDARD 20)
 include(CPack)
