@@ -45,6 +45,14 @@ void chronoTest()
          << std::setw(2) << mm.count() << "::"
          << std::setw(2) << ss.count() << "::"
          << std::setw(3) << msec.count() << endl;
+
+    /*
+     *  sleep_for(), sleep_until()用以停滞线程
+     *  try_lock_for(), try_lock_until()用以等待一个mutex时指定最大时间段
+     *  wait_for(), wait_until()用以在等待某条件成立或等待一个future时指定最大时间段
+     *  所有的..._for()结束停止都会用到一个dration
+     *  所有的...until()的函数都会用到一个timepoint
+    */
 }
 
 }
