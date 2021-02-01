@@ -8,6 +8,61 @@ std::ostream& operator<<(std::ostream& s, const std::chrono::duration<V, R>& d)
 {
     return s << d.count() << " of " << R::num << "/" << R::den << "]";
 }
+template<typename C>
+static void printClockData()
+{
+    using namespace std;
+    cout << "- precision";
+    using P = typename C::period;
+    if(ratio_less_equal<P, milli>::value){
+        using TT = typename ratio_multiply<P, kilo>::type;
+        cout << fixed << double(TT::num)/TT::den << "milliseconds" << endl;
+    }else{
+        cout << fixed << double(P::num)/P::den << "seconds" << endl;
+    }
+    cout << "- is_steady: " << boolalpha << C::is_steady << endl;
+}
+/*
+    timepoint与日历表示法的相互转换,然后打印出来
+*/
+static void asStringTest()
+{
+    using TP = std::chrono::system_clock::time_point;
+    auto asString = [](const TP& tp){
+        std::time_t t = std::chrono::system_clock::to_time_t(tp);
+        std::string ts = std::ctime(&t);
+        ts.resize(ts.size()-1);
+        return ts;
+    };
+    TP tp;
+    cout << "epoch: " << asString(tp) << endl;
+    tp = std::chrono::system_clock::now();
+    cout << "now: " << asString(tp) << endl;
+    tp = TP::max();
+    cout << "max: " << asString(tp) << endl;
+    // tp = TP::min();
+    // cout << "min: " << asString(tp) << endl;
+    auto makeTimePoint = [](int year, int mon, int day, int hour, int min, int sec = 0){
+        struct  std::tm t;
+        {
+            t.tm_sec = sec;
+            t.tm_min = min;
+            t.tm_hour = hour;
+            t.tm_mday = day;
+            t.tm_mon = mon - 1;
+            t.tm_year = year - 1900;
+            t.tm_isdst = -1;
+        };
+        std::time_t tt = std::mktime(&t);
+
+        if(tt == -1){
+            throw "no valid system time";
+        }else{
+            return std::chrono::system_clock::from_time_t(tt);
+        }
+    };
+    cout << asString(makeTimePoint(2021, 02,02, 16, 45)) << endl;
+}
 void chronoTest()
 {
     std::chrono::duration<int> twentySeconds(20);//20s
@@ -45,6 +100,15 @@ void chronoTest()
          << std::setw(2) << mm.count() << "::"
          << std::setw(2) << ss.count() << "::"
          << std::setw(3) << msec.count() << endl;
+
+    cout << "system_clock: " << endl;
+    printClockData<std::chrono::system_clock>();
+    cout << "\nhigh_resolution_clock: " << endl;
+    printClockData<std::chrono::high_resolution_clock>();
+    cout << "\nsteady_clock: " << endl;
+    printClockData<std::chrono::steady_clock>();
+
+    asStringTest();
 }
 
 }

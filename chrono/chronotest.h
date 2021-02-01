@@ -3,6 +3,8 @@
 #include <iostream>
 #include <iomanip>
 #include <chrono>
+#include <ratio>
+#include <ctime>
 
 namespace ChronoNamespace{
 
