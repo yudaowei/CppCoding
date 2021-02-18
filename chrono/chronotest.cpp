@@ -101,7 +101,6 @@ void chronoTest()
          << std::setw(2) << ss.count() << "::"
          << std::setw(3) << msec.count() << endl;
 
-<<<<<<< HEAD
     cout << "system_clock: " << endl;
     printClockData<std::chrono::system_clock>();
     cout << "\nhigh_resolution_clock: " << endl;
@@ -110,7 +109,6 @@ void chronoTest()
     printClockData<std::chrono::steady_clock>();
 
     asStringTest();
-=======
     /*
      *  sleep_for(), sleep_until()用以停滞线程
      *  try_lock_for(), try_lock_until()用以等待一个mutex时指定最大时间段
@@ -118,7 +116,6 @@ void chronoTest()
      *  所有的..._for()结束停止都会用到一个dration
      *  所有的...until()的函数都会用到一个timepoint
     */
->>>>>>> 512dd37be18b4e07875c3087fcd87ea378925da8
 }
 
 }
