@@ -7,8 +7,7 @@
 // #include "smartPointer/smartPointerTest.h"
 // #include "numericlimits/numberiClimitsTest.h"
 // #include "typetrait/typetraittest.h"
-// #include "chrono/chronotest.h"
-#include "STL/vector/vectortest.h"
+#include "chrono/chronotest.h"
 void printX()
 {
 
@@ -28,7 +27,6 @@ int main(int argc, char*argv[])
     // SmartPointerNamespace::smartPointerTest();
     // NumberLimitNamepase::numberLimitTest();
     // TypeTraitsNamespace::typeTraitsTest();
-    // ChronoNamespace::chronoTest();
-    VectorNamepace::vectorTest();
+    ChronoNamespace::chronoTest();
     return 0;
 }
