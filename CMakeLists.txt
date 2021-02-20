@@ -11,7 +11,8 @@ add_executable(cppCoding main.cpp
                     ${PROJECT_SOURCE_DIR}/smartPointer/smartPointerTest.cpp
                     ${PROJECT_SOURCE_DIR}/numericlimits/numberiClimitsTest.cpp
                     ${PROJECT_SOURCE_DIR}/typetrait/typetraittest.cpp
-                    ${PROJECT_SOURCE_DIR}/chrono/chronotest.cpp)
+                    ${PROJECT_SOURCE_DIR}/chrono/chronotest.cpp
+                    ${PROJECT_SOURCE_DIR}/STL/container.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
