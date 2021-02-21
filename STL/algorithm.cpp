@@ -11,7 +11,7 @@ static void simpleAlg()
 
 void algorithmTest()
 {
-    
+    simpleAlg();
 }
 
 }
