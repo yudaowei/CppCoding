@@ -11,10 +11,15 @@
 #include <map>
 #include <unordered_set>
 #include <unordered_map>
+#include <algorithm>
 namespace ContainerNamespace{
 
 void containerTest();
 
 }
+namespace AlgorithmNamespace{
 
+void algorithmTest();
+
+}
 #endif
