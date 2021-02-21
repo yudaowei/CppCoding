@@ -29,6 +29,7 @@ int main(int argc, char*argv[])
     // NumberLimitNamepase::numberLimitTest();
     // TypeTraitsNamespace::typeTraitsTest();
     // ChronoNamespace::chronoTest();
-    ContainerNamespace::containerTest();
+    // ContainerNamespace::containerTest();
+    AlgorithmNamespace::algorithmTest();
     return 0;
 }
