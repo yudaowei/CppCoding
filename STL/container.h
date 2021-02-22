@@ -12,6 +12,7 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <algorithm>
+#include <iterator>
 namespace ContainerNamespace{
 
 void containerTest();
@@ -21,5 +22,10 @@ namespace AlgorithmNamespace{
 
 void algorithmTest();
 
+}
+namespace IteratorNamespace{
+
+void iteratorTest();
+    
 }
 #endif
