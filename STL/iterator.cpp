@@ -43,6 +43,7 @@ void iteratorTest()
         std::unique_copy(coll.cbegin(), coll.cend(), 
                         std::ostream_iterator<std::string>(cout, "\n"));
     };
+    ioiter1();
 }
 
 }
