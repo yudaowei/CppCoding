@@ -43,7 +43,25 @@ void iteratorTest()
         std::unique_copy(coll.cbegin(), coll.cend(), 
                         std::ostream_iterator<std::string>(cout, "\n"));
     };
-    ioiter1();
+/*
+ *  反向迭代器  Reverse_Iterator
+ *  所有提供双向或随机访问迭代器的容器都可以通过 rbegin()/crbegin()), rend()/crend() 返回反向迭代器
+ *  reverse_iterator可造成算法逆向操作, 内部递增操作符调用转换为递减
+ */
+    auto reviter1 = [](){
+        std::vector<int> coll;
+        for(int i =1; i<=9; ++i){
+            coll.push_back(i);
+        }
+        //逆向遍历
+        std::copy(coll.crbegin(), coll.crend(), std::ostream_iterator<int>(cout, " "));
+        cout << endl;
+    };
+    reviter1();
+/*
+ *  搬移迭代器 Move_Iterator
+ *  对一个容器的元素搬移到另一个容器中, 以减少复制次数提升程序效率
+ */
 }
 
 }
