@@ -135,7 +135,15 @@ static void manipulatingAlgorithm()
             cout << "no prime number found" << endl;
         }
     };
-    prime1();
+    /*双参判断*/
+    auto sort1 = [](){
+
+        auto personSortCriterion = [](const int p1, const int p2){
+            return p1 < p2 ;
+        };
+        std::deque<int> coll;
+        std::sort(coll.begin(), coll.end(), personSortCriterion);
+    };
 }
 void algorithmTest()
 {

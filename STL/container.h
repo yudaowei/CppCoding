@@ -28,4 +28,9 @@ namespace IteratorNamespace{
 void iteratorTest();
     
 }
+namespace FunctionOBJNamespace{
+
+void functionOBJTest();
+
+}
 #endif

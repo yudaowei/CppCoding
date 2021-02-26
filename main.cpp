@@ -30,7 +30,8 @@ int main(int argc, char*argv[])
     // TypeTraitsNamespace::typeTraitsTest();
     // ChronoNamespace::chronoTest();
     // ContainerNamespace::containerTest();
-    AlgorithmNamespace::algorithmTest();
+    // AlgorithmNamespace::algorithmTest();
     // IteratorNamespace::iteratorTest();
+    FunctionOBJNamespace::functionOBJTest();
     return 0;
 }
