@@ -1,0 +1,16 @@
+#ifndef __PRINT_HPP__
+#define __PRINT_HPP__
+
+#include <iostream>
+#include <string>
+template <typename T>
+inline void PRINT_ELEMENTS(const T& coll, const std::string& optstr="")
+{
+    std::cout << optstr;
+    for(const auto& elem : coll){
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+}
+
+#endif
