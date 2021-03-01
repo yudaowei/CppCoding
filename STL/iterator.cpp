@@ -62,6 +62,11 @@ void iteratorTest()
  *  搬移迭代器 Move_Iterator
  *  对一个容器的元素搬移到另一个容器中, 以减少复制次数提升程序效率
  */
+/*
+ *  std::list<std::string> l;
+ *  std::vector<std::string> c(std::make_move_iterator(l.begin()), 
+ *                             std::make_move_iterator(l.end()));
+ */
 }
 
 }
