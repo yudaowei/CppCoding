@@ -16,7 +16,7 @@ add_executable(cppCoding main.cpp print.hpp
                     ${PROJECT_SOURCE_DIR}/STL/algorithm.cpp
                     ${PROJECT_SOURCE_DIR}/STL/iterator.cpp
                     ${PROJECT_SOURCE_DIR}/STL/functionobj.cpp
-                    )
+                    ${PROJECT_SOURCE_DIR}/STL/array.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

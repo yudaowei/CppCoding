@@ -13,6 +13,7 @@
 #include <unordered_map>
 #include <algorithm>
 #include <iterator>
+#include <numeric>
 namespace ContainerNamespace{
 
 void containerTest();
@@ -31,6 +32,11 @@ void iteratorTest();
 namespace FunctionOBJNamespace{
 
 void functionOBJTest();
+
+}
+namespace ArrayNamespace{
+
+void arrayTest();
 
 }
 #endif
